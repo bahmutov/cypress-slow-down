@@ -1,6 +1,83 @@
-# cypress-command-chain ![cypress version](https://img.shields.io/badge/cypress-10.3.1-brightgreen)
+# cypress-slow-down ![cypress version](https://img.shields.io/badge/cypress-10.3.1-brightgreen)
 
 > Slow down your Cypress tests
+
+## Install
+
+Add this NPM package to your project
+
+```text
+# install using NPM
+$ npm i -D cypress-slow-down
+# or install using Yarn
+$ yarn add -D cypress-slow-down
+```
+
+Include the plugin and call its function from your spec or support file
+
+```js
+// cypress/e2e/spec.cy.js
+import { slowCypressDown } from 'cypress-slow-down'
+// slow down each command by the default amount
+// which is 1 second
+slowCypressDown()
+```
+
+## Options
+
+You can control the delay before each command (in milliseconds)
+
+```js
+// when calling the slowCypressDown function
+slowCypressDown(1000)
+```
+
+You can also control the delay using the [Cypress environment variable](https://on.cypress.io/environment-variables) `commandDelay`.
+
+```js
+// cypress.config.js
+const { defineConfig } = require('cypress')
+
+module.exports = defineConfig({
+  e2e: {
+    env: {
+      commandDelay: 500,
+    },
+  },
+})
+// cypress/e2e/spec.cy.js
+import { slowCypressDown } from 'cypress-slow-down'
+slowCypressDown() // slows down each command by 500ms
+```
+
+## Disable the slow down
+
+You can disable the default slowdown by using `false`. For example, from the command line you can pass the boolean value:
+
+```
+$ npx cypress run --env commandDelay=false
+```
+
+Or you can use the [process (OS) environment variable](https://en.wikipedia.org/wiki/Environment_variable)
+
+```
+$ CYPRESS_commandDelay=false npx cypress run
+```
+
+Or you can use the `cypress.config.js` to disable the slowdown
+
+```js
+// cypress.config.js
+const { defineConfig } = require('cypress')
+
+module.exports = defineConfig({
+  e2e: {
+    env: {
+      commandDelay: false,
+    },
+  },
+})
+```
 
 ## Small print
 
