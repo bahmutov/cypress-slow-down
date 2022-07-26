@@ -1,0 +1,19 @@
+{
+  "name": "cypress-slow-down",
+  "version": "1.0.0",
+  "description": "Slow down your Cypress tests",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "cypress run",
+    "badges": "npx -p dependency-version-badge update-badge cypress"
+  },
+  "keywords": [
+    "cypress-plugin"
+  ],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^10.3.1",
+    "prettier": "^2.7.1"
+  }
+}
