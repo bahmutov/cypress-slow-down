@@ -13,6 +13,7 @@ jobs:
         with:
           record: true
           group: 'Slow down 1 second'
+          browser: chrome
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
 
@@ -25,6 +26,7 @@ jobs:
           record: true
           group: 'Disabled slow down'
           env: commandDelay=false
+          browser: chrome
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
 
