@@ -7,9 +7,26 @@ jobs:
       - name: Checkout 🛎
         uses: actions/checkout@v3
 
-      - name: Run tests 🧪
+      - name: Run tests with 1 second slow down 🧪
         # https://github.com/cypress-io/github-action
         uses: cypress-io/github-action@v4
+        with:
+          record: true
+          group: 'Slow down 1 second'
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+
+      - name: Run tests without slow down 🧪
+        # https://github.com/cypress-io/github-action
+        uses: cypress-io/github-action@v4
+        with:
+          # we have already installed everything
+          install: false
+          record: true
+          group: 'Disabled slow down'
+          env: commandDelay=false
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
 
       - name: Semantic Release 🚀
         uses: cycjimmy/semantic-release-action@v2

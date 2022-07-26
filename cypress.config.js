@@ -1,6 +1,7 @@
 const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
+  projectId: 'q3727b',
   e2e: {
     env: {
       commandDelay: 1000,
