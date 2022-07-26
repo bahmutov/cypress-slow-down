@@ -2,6 +2,8 @@
 
 > Slow down your Cypress tests
 
+Watch this plugin in the video [Slow Down Cypress Tests](https://youtu.be/lxx-_nAkQo8).
+
 ## Install
 
 Add this NPM package to your project
