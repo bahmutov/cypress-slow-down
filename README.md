@@ -19,6 +19,7 @@ Include the plugin and call its function from your spec or support file
 
 ```js
 // cypress/e2e/spec.cy.js
+// https://github.com/bahmutov/cypress-slow-down
 import { slowCypressDown } from 'cypress-slow-down'
 // slow down each command by the default amount
 // which is 1 second
@@ -43,6 +44,7 @@ const { defineConfig } = require('cypress')
 module.exports = defineConfig({
   e2e: {
     env: {
+      // https://github.com/bahmutov/cypress-slow-down
       commandDelay: 500,
     },
   },
@@ -75,6 +77,7 @@ const { defineConfig } = require('cypress')
 module.exports = defineConfig({
   e2e: {
     env: {
+      // https://github.com/bahmutov/cypress-slow-down
       commandDelay: false,
     },
   },
