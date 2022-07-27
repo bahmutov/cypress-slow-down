@@ -84,6 +84,14 @@ module.exports = defineConfig({
 })
 ```
 
+## Change the command delay from DevTools
+
+Because this plugin uses [cypress-plugin-config](https://github.com/bahmutov/cypress-plugin-config) to read the command delay option, you can change its value or disable the plugin completely from the DevTools console using the command `Cypress.setPluginConfigValue('commandDelay', <value>)`
+
+![Change the command delay from the DevTools](./images/set-delay.png)
+
+The re-run the tests by pressing the key "R" or clicking "Run All Tests" button.
+
 ## Small print
 
 Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2022

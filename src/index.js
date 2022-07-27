@@ -1,4 +1,9 @@
-function slowCypressDown(commandDelay = Cypress.env('commandDelay')) {
+import { getPluginConfigValue } from 'cypress-plugin-config'
+
+function slowCypressDown(commandDelay) {
+  if (typeof commandDelay === 'undefined') {
+    commandDelay = getPluginConfigValue('commandDelay')
+  }
   if (typeof commandDelay === 'undefined') {
     commandDelay = 1000
   }
@@ -10,7 +15,7 @@ function slowCypressDown(commandDelay = Cypress.env('commandDelay')) {
 
   if (commandDelay < 0) {
     throw new Error(
-      `Command delay cannot be negative, you passed ${commandDelay}`,
+      `Time is linear (I think), the command delay cannot be negative, you passed ${commandDelay}`,
     )
   }
 
