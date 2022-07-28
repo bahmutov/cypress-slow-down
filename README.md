@@ -101,8 +101,12 @@ You can slow down a part of your test by using the custom dual commands `cy.slow
 // cypress/e2e/spec.cy.js
 // https://github.com/bahmutov/cypress-slow-down
 import { slowCypressDown } from 'cypress-slow-down'
+// registers the cy.slowDown and cy.slowDownEnd commands
+import 'cypress-slow-down/commands'
+// must enable the plugin using slowCypressDown
 // can disable the slow down by default or use some default delay
 slowCypressDown(false)
+
 it('runs the middle part slowly', () => {
   cy.visit('/')
   cy.get('...').should('...').slowDown(1000)
