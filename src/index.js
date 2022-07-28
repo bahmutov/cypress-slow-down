@@ -1,4 +1,6 @@
-import { getPluginConfigValue } from 'cypress-plugin-config'
+// for consistency, if we use CommonJS to export from this module
+// we should use CommonJS convention to import other dependencies
+const { getPluginConfigValue } = require('cypress-plugin-config')
 
 function slowCypressDown(commandDelay) {
   if (typeof commandDelay === 'undefined') {
