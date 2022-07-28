@@ -3,8 +3,10 @@
   "version": "0.0.0-development",
   "description": "Slow down your Cypress tests",
   "main": "src/index.js",
+  "types": "src/index.d.ts",
   "files": [
-    "src"
+    "src",
+    "commands.js"
   ],
   "scripts": {
     "test": "cypress run",
