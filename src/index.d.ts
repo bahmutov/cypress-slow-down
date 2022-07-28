@@ -1,17 +1,11 @@
-// load type definitions that come with Cypress module
-// and then add our new commands to the "cy" object
-/// <reference types="cypress" />
-declare namespace Cypress {
-  interface Chainable {
-    /**
-     * Delays each command by N ms
-     * @param commandDelay number
-     * @see https://github.com/bahmutov/cypress-slow-down
-     */
-    slowDown(commandDelay: number): Chainable<any>
-    /**
-     * Ends any previous slow down
-     */
-    slowDownEnd(): Chainable<any>
-  }
-}
+// import the custom Cypress commands provided by this module
+import * as globals from './globals'
+
+/**
+ * Slows down every Cypress command by the given amount.
+ * Can disable the slowdown by passing false.
+ * @example
+ *  import {slowCypressDown} from 'cypress-slow-down'
+ *  slowCypressDown(1000)
+ */
+export function slowCypressDown(ms: number | false): void

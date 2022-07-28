@@ -92,6 +92,27 @@ Because this plugin uses [cypress-plugin-config](https://github.com/bahmutov/cyp
 
 The re-run the tests by pressing the key "R" or clicking "Run All Tests" button.
 
+## Child commands
+
+You can slow down a part of your test by using the custom dual commands `cy.slowDown(ms)` and `cy.slowDownEnd()`.
+
+```js
+// your spec file
+// cypress/e2e/spec.cy.js
+// https://github.com/bahmutov/cypress-slow-down
+import { slowCypressDown } from 'cypress-slow-down'
+// can disable the slow down by default or use some default delay
+slowCypressDown(false)
+it('runs the middle part slowly', () => {
+  cy.visit('/')
+  cy.get('...').should('...').slowDown(1000)
+  // these commands have 1 second delay
+  ...
+  cy.slowDownEnd()
+  // back to the normal speed
+})
+```
+
 ## Small print
 
 Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2022

@@ -1,5 +1,4 @@
 // @ts-check
-// @ts-ignore
 import { slowCypressDown } from '../..'
 import '../../commands'
 
