@@ -13,7 +13,15 @@ Cypress.Commands.add(
   'slowDown',
   { prevSubject: 'optional' },
   (subject, commandDelay) => {
-    // TODO: validate the input value
+    if (typeof commandDelay !== 'number') {
+      throw new Error(`Expected a numerical command delay, got ${commandDelay}`)
+    }
+    if (commandDelay < 0) {
+      throw new Error(
+        `Time is linear (I think), the command delay cannot be negative, you passed ${commandDelay}`,
+      )
+    }
+
     cy.log(`**slowDown ${commandDelay}**`)
     commandDelays.push(getPluginConfigValue(key))
     setPluginConfigValue(key, commandDelay)
