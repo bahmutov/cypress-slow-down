@@ -117,6 +117,8 @@ it('runs the middle part slowly', () => {
 })
 ```
 
+**Tip:** to see how the commands are slowed down you can use the [cypress-timestamps](https://github.com/bahmutov/cypress-timestamps) plugin.
+
 ## Small print
 
 Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2022

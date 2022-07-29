@@ -2,6 +2,14 @@
 import { slowCypressDown } from '../..'
 import '../../commands'
 
+// https://github.com/bahmutov/cypress-timestamps
+// this plugin prints the elapsed timestamps with each command
+// to demonstrate how we slowed it down
+require('cypress-timestamps/support')({
+  commandLog: 'all',
+  elapsed: true,
+})
+
 // disable any slow down at first
 slowCypressDown(false)
 
