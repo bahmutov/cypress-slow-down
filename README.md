@@ -1,4 +1,4 @@
-# cypress-slow-down ![cypress version](https://img.shields.io/badge/cypress-10.8.0-brightgreen) [![ci](https://github.com/bahmutov/cypress-slow-down/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/bahmutov/cypress-slow-down/actions/workflows/ci.yml) [![cypress-slow-down](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/q3727b&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/q3727b/runs)
+# cypress-slow-down ![cypress version](https://img.shields.io/badge/cypress-10.9.0-brightgreen) [![ci](https://github.com/bahmutov/cypress-slow-down/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/bahmutov/cypress-slow-down/actions/workflows/ci.yml) [![cypress-slow-down](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/q3727b&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/q3727b/runs)
 
 > Slow down your Cypress tests
 
