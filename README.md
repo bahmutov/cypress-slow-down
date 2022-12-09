@@ -4,6 +4,8 @@
 
 Watch the introduction to this plugin in the video [Slow Down Cypress Tests](https://youtu.be/lxx-_nAkQo8). For advanced usage, see the lessons in my [Cypress Plugins course](https://cypress.tips/courses/cypress-plugins).
 
+![One command per second](./images/slow.gif)
+
 ## Install
 
 Add this NPM package to your project
