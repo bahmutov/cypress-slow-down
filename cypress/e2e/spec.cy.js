@@ -1,6 +1,6 @@
 import { slowCypressDown } from '../..'
 
-slowCypressDown()
+slowCypressDown(1000, false)
 
 describe('TodoMVC', () => {
   it('clears completed todos', () => {

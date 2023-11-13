@@ -56,6 +56,12 @@ import { slowCypressDown } from 'cypress-slow-down'
 slowCypressDown() // slows down each command by 500ms
 ```
 
+You can set the optional `logToConsole` parameter to false to prevent the plugin from logging each delay to the console.
+
+```js
+slowCypressDown(1000, false)
+```
+
 ## Disable the slow down
 
 You can disable the default slowdown by using `false`. For example, from the command line you can pass the boolean value:

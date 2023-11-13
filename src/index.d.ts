@@ -8,4 +8,7 @@ import * as globals from './globals'
  *  import {slowCypressDown} from 'cypress-slow-down'
  *  slowCypressDown(1000)
  */
-export function slowCypressDown(ms?: number | false): void
+export function slowCypressDown(
+  ms?: number | false,
+  logToConsole?: boolean,
+): void
