@@ -7,7 +7,7 @@ const {
 
 const key = 'commandDelay'
 
-function slowCypressDown(commandDelay) {
+function slowCypressDown(commandDelay, logToConsole = true) {
   if (typeof commandDelay === 'undefined') {
     commandDelay = getPluginConfigValue(key)
   }
@@ -27,7 +27,9 @@ function slowCypressDown(commandDelay) {
     // get the _current_ command delay, which could be changed
     // using the child command slowDown(ms)
     const currentCommandDelay = getPluginConfigValue(key) || commandDelay
-    console.log({ currentCommandDelay })
+    if (logToConsole) {
+      console.log({ currentCommandDelay })
+    }
     if (!currentCommandDelay) {
       return rc(cmd)
     }
