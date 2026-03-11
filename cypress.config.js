@@ -3,7 +3,7 @@ const { defineConfig } = require('cypress')
 module.exports = defineConfig({
   projectId: 'q3727b',
   e2e: {
-    env: {
+    expose: {
       commandDelay: 1000,
     },
     baseUrl: 'https://example.cypress.io',
