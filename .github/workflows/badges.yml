@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎
-        uses: actions/checkout@v4
+        # https://github.com/actions/checkout
+        uses: actions/checkout@v6
 
       - name: Update version badges 🏷
         run: npm run badges

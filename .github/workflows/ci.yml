@@ -13,12 +13,13 @@ jobs:
       # that this workflow is trusted
       id-token: write
     steps:
+      - name: Checkout 🛎
+        # https://github.com/actions/checkout
+        uses: actions/checkout@v6
+
       - uses: actions/setup-node@v6
         with:
           node-version-file: '.nvmrc'
-
-      - name: Checkout 🛎
-        uses: actions/checkout@v4
 
       - name: Run tests with 1 second slow down 🧪
         # https://github.com/cypress-io/github-action
