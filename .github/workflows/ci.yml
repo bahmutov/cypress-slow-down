@@ -13,6 +13,10 @@ jobs:
       # that this workflow is trusted
       id-token: write
     steps:
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: '.nvmrc'
+
       - name: Checkout 🛎
         uses: actions/checkout@v4
 
