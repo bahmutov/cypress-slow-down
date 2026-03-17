@@ -29,6 +29,6 @@
     "url": "https://github.com/bahmutov/cypress-slow-down.git"
   },
   "dependencies": {
-    "cypress-plugin-config": "^1.0.0"
+    "cypress-plugin-config": "^2.0.0"
   }
 }

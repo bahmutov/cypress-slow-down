@@ -67,7 +67,7 @@ slowCypressDown(1000, false)
 You can disable the default slowdown by using `false`. For example, from the command line you can pass the boolean value:
 
 ```
-$ npx cypress run --env commandDelay=false
+$ npx cypress run --expose commandDelay=false
 ```
 
 Or you can use the [process (OS) environment variable](https://en.wikipedia.org/wiki/Environment_variable)
