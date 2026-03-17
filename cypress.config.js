@@ -2,6 +2,7 @@ const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
   projectId: 'q3727b',
+  allowCypressEnv: false,
   e2e: {
     expose: {
       commandDelay: 1000,
@@ -12,7 +13,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
       // and load any plugins that require the Node environment
-      console.log('Env', config.env)
+      console.log('Exposed variables', config.expose)
     },
   },
 })
