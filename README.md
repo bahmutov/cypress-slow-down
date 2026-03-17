@@ -6,6 +6,8 @@ Watch the introduction to this plugin in the video [Slow Down Cypress Tests](htt
 
 ![One command per second](./images/slow.gif)
 
+Requires Cypress v15.10+ (since it uses `Cypress.expose`, see [the blog post](https://glebbahmutov.com/blog/cypress-expose/))
+
 ## Install
 
 Add this NPM package to your project

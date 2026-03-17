@@ -2,7 +2,16 @@ name: ci
 on: push
 jobs:
   test:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
+    permissions:
+      # allow the release step to comment on
+      # issues, pull requests, and write to the repo
+      contents: write
+      issues: write
+      pull-requests: write
+      # Required for OIDC to let NPM registry know
+      # that this workflow is trusted
+      id-token: write
     steps:
       - name: Checkout 🛎
         uses: actions/checkout@v4
@@ -32,10 +41,9 @@ jobs:
 
       - name: Semantic Release 🚀
         # https://github.com/cycjimmy/semantic-release-action
-        uses: cycjimmy/semantic-release-action@v4
+        uses: cycjimmy/semantic-release-action@v6
         if: github.ref == 'refs/heads/main'
         with:
           branch: main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
