@@ -23,7 +23,7 @@ jobs:
 
       - name: Run tests with 1 second slow down 🧪
         # https://github.com/cypress-io/github-action
-        uses: cypress-io/github-action@v6
+        uses: cypress-io/github-action@v7.2.0
         with:
           record: true
           group: 'Slow down 1 second'
@@ -33,7 +33,7 @@ jobs:
 
       - name: Run tests without slow down 🧪
         # https://github.com/cypress-io/github-action
-        uses: cypress-io/github-action@v6
+        uses: cypress-io/github-action@v7.2.0
         with:
           # we have already installed everything
           install: false
